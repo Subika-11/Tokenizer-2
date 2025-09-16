@@ -1,1 +1,2 @@
+*.pkl filter=lfs diff=lfs merge=lfs -text
 data/samanantar_eng_90_percent_cleaned1.txt filter=lfs diff=lfs merge=lfs -text
