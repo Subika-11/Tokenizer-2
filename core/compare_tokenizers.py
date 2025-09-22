@@ -37,14 +37,14 @@ def evaluate_texts(texts, tokenizers):
 # ------------------ Main ------------------
 if __name__ == "__main__":
     # Load Samanantar Tamil dataset from local file
-    local_file = r"C:\Users\HP\Documents\vs code\tokenizers-coling2025-main\GPE\samanantar_eng_90_percent_cleaned1.txt"
+    local_file = "data\samanantar_eng_90_percent_cleaned1.txt"
     with open(local_file, "r", encoding="utf-8") as f:
         lines = [re.sub(r'\s+', ' ', line.strip()) for line in f if line.strip()]
 
     # Load pretrained tokenizers (trained on Samanantar)
-    bpe_tok = load_bpe("vocab_bpe.pkl", "merges_bpe.pkl")
-    gpe_tok = load_gpe("vocab_gpe.pkl", "merges_gpe.pkl")
-    sandhi_tok = load_tokenizer("vocab.pkl", "merges.pkl")
+    bpe_tok = load_bpe("models\vocab_bpe.pkl", "models\merges_bpe.pkl")
+    gpe_tok = load_gpe("models\vocab_gpe.pkl", "models\merges_gpe.pkl")
+    sandhi_tok = load_tokenizer("models\vocab_re.pkl", "models\merges.pkl")
 
     tokenizers = {
         "BPE": bpe_tok,
