@@ -57,7 +57,7 @@ def load_gpe(vocab_file="vocab_gpe.pkl", merges_file="merges_gpe.pkl"):
 # ---------------- MAIN ----------------
 if __name__ == "__main__":
     # Load corpus from a local file
-    with open(r"C:\Users\HP\Documents\vs code\tokenizers-coling2025-main\GPE\samanantar_eng_90_percent_cleaned1.txt",
+    with open(r"data\samanantar_eng_90_percent_cleaned1.txt",
               "r", encoding="utf-8") as f:
         corpus = [line.strip() for line in f if line.strip()][:500]  # limit to 500 lines for testing
 
