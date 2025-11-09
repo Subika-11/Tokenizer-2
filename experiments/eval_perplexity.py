@@ -11,7 +11,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 print("Using device:", device)
 
 # Path to your locally downloaded Gemma-3 model
-model_name = r"C:\Users\ROSHINI PRIYA\Downloads\tokenizers-coling2025-main (4)\tokenizers-coling2025-main\gemma-3-270m"# ✅ Use eager attention implementation
+model_name = r"models\gemma-3-270m"# ✅ Use eager attention implementation
 model = AutoModelForCausalLM.from_pretrained(
     model_name,
     local_files_only=True,
@@ -30,7 +30,7 @@ def load_dataset(path, sample_size=50000):
     return lines[:sample_size]
 
 dataset = load_dataset(
-    r"C:\Users\ROSHINI PRIYA\Downloads\tokenizers-coling2025-main (4)\tokenizers-coling2025-main\GPE\samanantar_eng_90_percent_cleaned1.txt",
+    r"data\samanantar_eng_90_percent_cleaned1.txt",
     sample_size = 1000
 )
 print("Dataset loaded:", len(dataset), "lines")
