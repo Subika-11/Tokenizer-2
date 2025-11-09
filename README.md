@@ -42,57 +42,49 @@ This repository provides a comprehensive suite of tools and scripts for tokenizi
 
 ### Tokenize Tamil Text
 
-To tokenize a Tamil text file using BPE:
-sh
-python core/bpe.py --input data/sample_tamil.txt --output data/tokenized_output.txt
+->To tokenize a Tamil text file using BPE:
+python core/bpe.py 
+
+->To tokenize a Tamil text file using GPE:
+python core/gpe.py 
+
+->To tokenize a Tamil text file using Sandhi-GPE:
+python core/sandhi.py 
+python core/GPE-Sandhi.py 
 
 
 ### Compare Tokenizers
 
-To compare different tokenizers:
-sh
-python core/compare_tokenizers.py --input data/sample_tamil.txt
-
-
-### Sandhi Processing
-
-To process sandhi rules:
-sh
-python core/sandhi.py --input data/sample_tamil.txt --output data/sandhi_output.txt
-
+->To compare different tokenizers:
+python core/compare_tokenizers.py 
 
 ### OOV Detection
 
 To detect out-of-vocabulary words:
-sh
-python core/oov.py --input data/sample_tamil.txt --vocab data/vocab_bpe.pkl
 
+python core/oov.py
 
 ### Trim Tokens
 
 To trim tokens in a file:
-sh
-python core/trim_tokens.py --input data/agathyam_tokens.txt --output data/agathyam_tokens_trimmed.txt
-
+python core/trim_tokens.py 
 
 ### Evaluate Perplexity
 
 To evaluate model perplexity:
-sh
-python experiments/eval_perplexity.py --model_path data/checkpoint.pkl --input data/sample_tamil.txt
+python experiments/eval_perplexity.py 
 
 
 ### Initialize Embeddings
 
 To initialize embeddings:
 sh
-python experiments/initialize_embeddings.py --vocab data/vocab_bpe.pkl
+python experiments/initialize_embeddings.py 
 
 
 ## Testing
 
 Run all unit tests with:
-sh
 pytest tests/
 
 
