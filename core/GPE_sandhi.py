@@ -16,7 +16,7 @@ if __name__ == "__main__":
     # Use "mix" to enable Tamil + English + code-mix (Tanglish etc.)
     lang = "mix"
     DUMMY_PREFIX = " "
-    checkpoint_path = "C:/Users/HP/Documents/vs code/tokenizers-coling2025-main/checkpoint.pkl"
+    checkpoint_path = "data\checkpoint.pkl"
 
     # -------------------------------------------------------------------
     # Helpers
